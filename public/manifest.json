@@ -1,0 +1,15 @@
+
+{
+  "version": "1.0.0",
+  "short_name": "Adam Duncan",
+  "name": "Adam Duncan",
+  "start_url": "/",
+  "display": "standalone",
+  "launch_path": "/index.html",
+  "description": "Adam Duncan - Front-end web developer, London",
+  "developer": {
+    "name": "Adam Duncan",
+    "url": "https://www.adamduncandesigns.com"
+  },
+  "default_locale": "en"
+}
