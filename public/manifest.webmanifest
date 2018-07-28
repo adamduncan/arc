@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "lang": "en",
+  "short_name": "ArcTanGent",
+  "name": "ArcTanGent 2018",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#111111",
+  "launch_path": "/index.html",
+  "description": "ArcTanGent 2018 timetable",
+  "icons": [
+    {
+      "src": "../public/icon-touch.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "developer": {
+    "name": "Adam Duncan",
+    "url": "https://www.adamduncandesigns.com"
+  }
+}

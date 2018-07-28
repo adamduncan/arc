@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Clapp &mdash; </title>
+  <title>Clapp &mdash; ArcTanGent 2018</title>
 
   <meta name="theme-color" content="#111111">
   <meta name="description" content="" />
@@ -21,12 +21,18 @@
   <meta name="twitter:description" content="">
   <meta name="twitter:image" content=""> -->
 
-  <link rel="manifest" href="../public/manifest.json">
+  <link rel="manifest" href="../public/manifest.webmanifest">
 
   <link rel="stylesheet" href="./css/main.css">
 
   <link rel="shortcut icon" href="../public/icon-touch.png">
   <link rel="apple-touch-icon-precomposed" href="../public/icon-touch.png">
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./serviceworker.js');
+    }
+  </script>
 
 </head>
 
