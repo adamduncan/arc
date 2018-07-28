@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "parcel src/index.html --out-dir ./build/ --open",
-    "build": "parcel build src/index.html --out-dir ./build/ --public-url /clapp/ --no-source-maps"
+    "build": "parcel build src/index.html --out-dir ./build/ --no-source-maps"
   },
   "repository": {
     "type": "git",
