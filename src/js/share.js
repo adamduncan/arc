@@ -24,7 +24,7 @@ function share () {
 function shareNative (sharePath) {
   navigator.share({
     title: 'ArcTanGent 2018',
-    text: 'Check out my highlights at ArcTanGent 2018: ',
+    text: '',
     url: sharePath
   })
 }
