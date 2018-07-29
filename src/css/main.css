@@ -47,6 +47,22 @@ li {
 
 h1 {
   font-weight: 400;
+  margin-bottom: 0.25em;
+}
+
+a {
+  border-bottom: 1px solid #68adfc;
+  color: #0361CE;
+  text-decoration: none;
+  transition: border 150ms ease-out;
+}
+a:hover,
+a:focus {
+  border-bottom-color: #0361CE;
+}
+
+header {
+  margin-bottom: 4rem;
 }
 
 main {
@@ -248,4 +264,17 @@ main {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+
+/* SHARE */
+
+.btn-share {
+  border: 0;
+  color: #0361CE;
+  cursor: pointer;
+  float: right;
+  font-size: 1rem;
+  padding: 0.75em;
+  margin: -0.75em;
 }

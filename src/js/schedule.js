@@ -1,7 +1,7 @@
+export const fragmentPrefix = '#u/?'
+export const storageUserId = 'clapp-me'
 let storageId = 'clapp-me'
-const storageUserId = 'clapp-me'
 const storageSharedId = 'clapp-u'
-const fragmentPrefix = '#u/?'
 const itemAttr = 'data-item'
 const itemToggleEls = document.querySelectorAll('[data-item-toggle]')
 const selectedClass = '-is-selected'

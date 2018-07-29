@@ -1,5 +1,6 @@
 import Frtabs from './tabs'
 import schedule from './schedule'
+import share from './share'
 
 const timetableEl = document.getElementById('timetable')
 const timetableTop = timetableEl ? timetableEl.offsetTop : 0
@@ -24,3 +25,6 @@ const eventTabs = Frtabs({
 
 // SCHEDULE
 schedule.init()
+
+// SHARE
+share.init()
