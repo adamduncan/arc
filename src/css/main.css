@@ -306,8 +306,11 @@ main {
 	background-color: #fff;
 	left: 50%;
 	padding: 4rem 2rem 2rem;
+	max-height: calc(100vh - 4rem);
 	max-width: 30rem;
 	opacity: 0;
+	-webkit-overflow-scrolling: touch;
+	overflow-y: auto;
 	position: absolute;
 	top: 50%;
 	transform: translateX(-50%) translateY(-50%); /* Modal blurs when using translate3d */
