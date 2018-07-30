@@ -15,7 +15,11 @@
     "url": "https://github.com/adamduncan/arc/issues"
   },
   "homepage": "https://arctangent.netlify.com",
-  "dependencies": {},
+  "dependencies": {
+    "clipboard": "^2.0.1",
+    "flickity": "^2.1.2",
+    "fr-dialogmodal": "^1.0.4"
+  },
   "devDependencies": {
     "autoprefixer": "^8.6.5",
     "babel-core": "^6.26.3",

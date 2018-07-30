@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#" class="no-js">
 
 <head prefix="og: http://ogp.me/ns">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Clapp &mdash; ArcTanGent 2018</title>
+	<title>Clapp &mdash; ArcTanGent 2018</title>
 
-  <meta name="theme-color" content="#111111">
-  <meta name="description" content="" />
+	<meta name="theme-color" content="#111111">
+	<meta name="description" content="" />
 
-  <!-- <meta property="og:title" content="Clapp">
+	<!-- <meta property="og:title" content="Clapp">
   <meta property="og:description" content="">
   <meta property="og:image" content="">
 
@@ -21,658 +21,698 @@
   <meta name="twitter:description" content="">
   <meta name="twitter:image" content=""> -->
 
-  <link rel="manifest" href="../public/manifest.webmanifest">
+	<link rel="manifest" href="../public/manifest.webmanifest">
 
-  <link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="./css/main.css">
 
-  <link rel="shortcut icon" href="../public/icon-touch.png">
-  <link rel="apple-touch-icon-precomposed" href="../public/icon-touch.png">
+	<link rel="shortcut icon" href="../public/icon-touch.png">
+	<link rel="apple-touch-icon-precomposed" href="../public/icon-touch.png">
 
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('./serviceworker.js');
-    }
-  </script>
+	<script>
+		document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, 'js');
+		if ('serviceWorker' in navigator) navigator.serviceWorker.register('./serviceworker.js');
+	</script>
 
 </head>
 
 <body>
-  <main>
-    <header>
-      <div class="wrapper">
-        <h1>ArcTanGent 2018</h1>
-        <a href="http://www.arctangent.co.uk/">arctangent.co.uk</a>
-        <button class="button button--icon button--share" data-share>Share</button>
-      </div>
-    </header>
+	<main>
+		<header>
+			<div class="wrapper">
+				<h1>ArcTanGent 2018</h1>
+				<a href="http://www.arctangent.co.uk/">arctangent.co.uk</a>
+				<button class="button button--icon button--share" data-share aria-controls="share-modal">Share</button>
+				<div class="js-fr-dialogmodal" id="share-modal" aria-hidden="true">
+					<div class="modal modal--slide-up js-fr-dialogmodal-modal" aria-labelledby="modal-title">
+						<div role="document">
+							<h2 id="modal-title">Share your highlights</h2>
+							<button class="js-fr-dialogmodal-close modal__close">Close</button>
+							<ul class="list-stack">
+								<li class="list-stack__item">
+									<a href="#" data-share-link="whatsapp" class="link-icon" target="_blank">
+										<svg class="link-icon__icon" aria-labelledby="simpleicons-whatsapp-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-whatsapp-icon">WhatsApp</title><path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.195 2.105 3.195 5.1 4.485.714.3 1.27.48 1.704.629.714.227 1.365.195 1.88.121.574-.091 1.767-.721 2.016-1.426.255-.705.255-1.29.18-1.425-.074-.135-.27-.21-.57-.345m-5.446 7.443h-.016c-1.77 0-3.524-.48-5.055-1.38l-.36-.214-3.75.975 1.005-3.645-.239-.375c-.99-1.576-1.516-3.391-1.516-5.26 0-5.445 4.455-9.885 9.942-9.885 2.654 0 5.145 1.035 7.021 2.91 1.875 1.859 2.909 4.35 2.909 6.99-.004 5.444-4.46 9.885-9.935 9.885M20.52 3.449C18.24 1.245 15.24 0 12.045 0 5.463 0 .104 5.334.101 11.893c0 2.096.549 4.14 1.595 5.945L0 24l6.335-1.652c1.746.943 3.71 1.444 5.71 1.447h.006c6.585 0 11.946-5.336 11.949-11.896 0-3.176-1.24-6.165-3.495-8.411"/></svg>
+										WhatsApp
+									</a>
+								</li>
+								<li class="list-stack__item">
+									<a href="#" data-share-link="facebook" class="link-icon" target="_blank">
+										<svg class="link-icon__icon" aria-labelledby="simpleicons-facebook-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-facebook-icon">Facebook</title><path d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0"/></svg>
+										Facebook
+									</a>
+								</li>
+								<li class="list-stack__item">
+									<a href="#" data-share-link="messenger" class="link-icon" target="_blank">
+										<svg class="link-icon__icon" aria-labelledby="simpleicons-messenger-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-messenger-icon">Messenger</title><path d="M12 0C5.373 0 0 4.974 0 11.111c0 3.498 1.744 6.614 4.469 8.654V24l4.088-2.242c1.092.3 2.246.464 3.443.464 6.627 0 12-4.975 12-11.11S18.627 0 12 0zm1.191 14.963l-3.055-3.26-5.963 3.26L10.732 8l3.131 3.259L19.752 8l-6.561 6.963z"/></svg>
+										Messenger
+									</a>
+								</li>
+								<li class="list-stack__item">
+									<a href="#" data-share-link="twitter" class="link-icon" target="_blank">
+										<svg class="link-icon__icon" aria-labelledby="simpleicons-twitter-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-twitter-icon">Twitter</title><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>
+										Twitter
+									</a>
+								</li>
+								<li class="list-stack__item">
+									<input id="copy-link" class="visually-hidden" value="">
+									<button data-copy-link data-clipboard-target="#copy-link" class="link-icon">
+										<svg class="link-icon__icon" aria-labelledby="simpleicons-link-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title id="simpleicons-link-icon">Copy to clipboard</title><path d="M10.3 15c-.3 0-.7-.2-.9-.4a5.9 5.9 0 0 1 0-8.3L14 1.7a5.8 5.8 0 0 1 8.3 0c2.3 2.3 2.3 6 0 8.3l-2.1 2a1.2 1.2 0 0 1-1.8-1.7l2.1-2a3.4 3.4 0 0 0-4.7-4.8L11.2 8a3.4 3.4 0 0 0 0 4.7 1.2 1.2 0 0 1-1 2.2zm-4.4 9a5.9 5.9 0 0 1-4.1-10l2-2.1a1.2 1.2 0 0 1 1.8 1.7l-2.1 2.2a3.4 3.4 0 0 0 4.7 4.7l4.6-4.6a3.4 3.4 0 0 0 0-4.8 1.2 1.2 0 1 1 1.8-1.7c2.3 2.3 2.3 6 0 8.3L10 22.3A5.8 5.8 0 0 1 5.9 24z" fill-rule="nonzero"/></svg>
+										<span data-copied-text="Copied!">Copy to clipboard</span>
+									</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
 
-    <section id="timetable">
-      <h2 class="visually-hidden">Timetable</h2>
+		<section id="timetable">
+			<h2 class="visually-hidden">Timetable</h2>
 
-      <div class="fr-tabs js-fr-tabs">
-        <ul class="fr-tabs__tablist js-fr-tabs__tablist">
-          <li class="fr-tabs__tablist-item">
-            <a class="fr-tabs__tab" id="tab-1" href="#day-20180816">Thu 16 Aug</a>
-          </li>
-          <li class="fr-tabs__tablist-item">
-            <a class="fr-tabs__tab" id="tab-2" href="#day-20180817">Fri 17 Aug</a>
-          </li>
-          <li class="fr-tabs__tablist-item">
-            <a class="fr-tabs__tab" id="tab-3" href="#day-20180818">Sat 18 Aug</a>
-          </li>
-        </ul>
+			<div class="fr-tabs js-fr-tabs">
+				<ul class="fr-tabs__tablist js-fr-tabs__tablist">
+					<li class="fr-tabs__tablist-item">
+						<a class="fr-tabs__tab" id="tab-1" href="#day-20180816">Thu 16 Aug</a>
+					</li>
+					<li class="fr-tabs__tablist-item">
+						<a class="fr-tabs__tab" id="tab-2" href="#day-20180817">Fri 17 Aug</a>
+					</li>
+					<li class="fr-tabs__tablist-item">
+						<a class="fr-tabs__tab" id="tab-3" href="#day-20180818">Sat 18 Aug</a>
+					</li>
+				</ul>
 
-        <section id="day-20180816" class="fr-tabs__panel js-fr-tabs__panel">
-          <h3 class="visually-hidden">Thursday 16 August</h3>
-          <div class="timetable">
-            <section class="timetable__location">
-              <h4 class="timetable__header">Arc</h4>
-              <div class="timetable__slot" style="grid-row-start: 62; grid-row-end: 68;">
-                <div class="timetable__item" data-item="0">
-                  <div class="timetable__item-name">People Like Milk Products</div>
-                  <div class="timetable__item-time">17:00–17:30</div>
-                  <button class="timetable__toggle" data-item-toggle="0">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 77; grid-row-end: 86;">
-                <div class="timetable__item" data-item="1">
-                  <div class="timetable__item-name">Foxing</div>
-                  <div class="timetable__item-time">18:15–19:00</div>
-                  <button class="timetable__toggle" data-item-toggle="1">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 95; grid-row-end: 104;">
-                <div class="timetable__item" data-item="2">
-                  <div class="timetable__item-name">Pianos Become the Teeth</div>
-                  <div class="timetable__item-time">19:45–20:30</div>
-                  <button class="timetable__toggle" data-item-toggle="2">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 116; grid-row-end: 134;">
-                <div class="timetable__item" data-item="3">
-                  <div class="timetable__item-name">And So I Watch You From Afar</div>
-                  <div class="timetable__item-time">21:30–23:00</div>
-                  <button class="timetable__toggle" data-item-toggle="3">Toggle item</button>
-                </div>
-              </div>
-            </section>
+				<section id="day-20180816" class="fr-tabs__panel js-fr-tabs__panel">
+					<h3 class="visually-hidden">Thursday 16 August</h3>
+					<div class="timetable">
+						<section class="timetable__location">
+							<h4 class="timetable__header">Arc</h4>
+							<div class="timetable__slot" style="grid-row-start: 62; grid-row-end: 68;">
+								<div class="timetable__item" data-item="0">
+									<div class="timetable__item-name">People Like Milk Products</div>
+									<div class="timetable__item-time">17:00–17:30</div>
+									<button class="timetable__toggle" data-item-toggle="0">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 77; grid-row-end: 86;">
+								<div class="timetable__item" data-item="1">
+									<div class="timetable__item-name">Foxing</div>
+									<div class="timetable__item-time">18:15–19:00</div>
+									<button class="timetable__toggle" data-item-toggle="1">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 95; grid-row-end: 104;">
+								<div class="timetable__item" data-item="2">
+									<div class="timetable__item-name">Pianos Become the Teeth</div>
+									<div class="timetable__item-time">19:45–20:30</div>
+									<button class="timetable__toggle" data-item-toggle="2">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 116; grid-row-end: 134;">
+								<div class="timetable__item" data-item="3">
+									<div class="timetable__item-name">And So I Watch You From Afar</div>
+									<div class="timetable__item-time">21:30–23:00</div>
+									<button class="timetable__toggle" data-item-toggle="3">Toggle item</button>
+								</div>
+							</div>
+						</section>
 
-            <section class="timetable__location">
-              <h4 class="timetable__header">Yohkai</h4>
-              <div class="timetable__slot" style="grid-row-start: 12; grid-row-end: 18;">
-                <div class="timetable__item" data-item="4">
-                  <div class="timetable__item-name">Boss Keloid</div>
-                  <div class="timetable__item-time">12:50–13:20</div>
-                  <button class="timetable__toggle" data-item-toggle="4">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 26; grid-row-end: 32;">
-                <div class="timetable__item" data-item="5">
-                  <div class="timetable__item-name">Alpha Male Tea Party</div>
-                  <div class="timetable__item-time">14:00–14:30</div>
-                  <button class="timetable__toggle" data-item-toggle="5">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 40; grid-row-end: 46;">
-                <div class="timetable__item" data-item="6">
-                  <div class="timetable__item-name">Ohhms</div>
-                  <div class="timetable__item-time">15:10–15:40</div>
-                  <button class="timetable__toggle" data-item-toggle="6">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 54; grid-row-end: 60;">
-                <div class="timetable__item" data-item="7">
-                  <div class="timetable__item-name">Delta Sleep</div>
-                  <div class="timetable__item-time">16:20–16:50</div>
-                  <button class="timetable__toggle" data-item-toggle="7">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 68; grid-row-end: 77;">
-                <div class="timetable__item" data-item="8">
-                  <div class="timetable__item-name">Rolo Tomassi</div>
-                  <div class="timetable__item-time">17:30–18:15</div>
-                  <button class="timetable__toggle" data-item-toggle="8">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 86; grid-row-end: 95;">
-                <div class="timetable__item" data-item="9">
-                  <div class="timetable__item-name">Jamie Lenman</div>
-                  <div class="timetable__item-time">19:00–19:45</div>
-                  <button class="timetable__toggle" data-item-toggle="9">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 104; grid-row-end: 116;">
-                <div class="timetable__item" data-item="10">
-                  <div class="timetable__item-name">La Dispute</div>
-                  <div class="timetable__item-time">20:30–21:30</div>
-                  <button class="timetable__toggle" data-item-toggle="10">Toggle item</button>
-                </div>
-              </div>
-            </section>
+						<section class="timetable__location">
+							<h4 class="timetable__header">Yohkai</h4>
+							<div class="timetable__slot" style="grid-row-start: 12; grid-row-end: 18;">
+								<div class="timetable__item" data-item="4">
+									<div class="timetable__item-name">Boss Keloid</div>
+									<div class="timetable__item-time">12:50–13:20</div>
+									<button class="timetable__toggle" data-item-toggle="4">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 26; grid-row-end: 32;">
+								<div class="timetable__item" data-item="5">
+									<div class="timetable__item-name">Alpha Male Tea Party</div>
+									<div class="timetable__item-time">14:00–14:30</div>
+									<button class="timetable__toggle" data-item-toggle="5">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 40; grid-row-end: 46;">
+								<div class="timetable__item" data-item="6">
+									<div class="timetable__item-name">Ohhms</div>
+									<div class="timetable__item-time">15:10–15:40</div>
+									<button class="timetable__toggle" data-item-toggle="6">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 54; grid-row-end: 60;">
+								<div class="timetable__item" data-item="7">
+									<div class="timetable__item-name">Delta Sleep</div>
+									<div class="timetable__item-time">16:20–16:50</div>
+									<button class="timetable__toggle" data-item-toggle="7">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 68; grid-row-end: 77;">
+								<div class="timetable__item" data-item="8">
+									<div class="timetable__item-name">Rolo Tomassi</div>
+									<div class="timetable__item-time">17:30–18:15</div>
+									<button class="timetable__toggle" data-item-toggle="8">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 86; grid-row-end: 95;">
+								<div class="timetable__item" data-item="9">
+									<div class="timetable__item-name">Jamie Lenman</div>
+									<div class="timetable__item-time">19:00–19:45</div>
+									<button class="timetable__toggle" data-item-toggle="9">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 104; grid-row-end: 116;">
+								<div class="timetable__item" data-item="10">
+									<div class="timetable__item-name">La Dispute</div>
+									<div class="timetable__item-time">20:30–21:30</div>
+									<button class="timetable__toggle" data-item-toggle="10">Toggle item</button>
+								</div>
+							</div>
+						</section>
 
-            <section class="timetable__location">
-              <h4 class="timetable__header">PX3</h4>
-              <div class="timetable__slot" style="grid-row-start: 5; grid-row-end: 11;">
-                <div class="timetable__item" data-item="11">
-                  <div class="timetable__item-name">Cassels</div>
-                  <div class="timetable__item-time">12:15–12:45</div>
-                  <button class="timetable__toggle" data-item-toggle="11">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 19; grid-row-end: 25;">
-                <div class="timetable__item" data-item="12">
-                  <div class="timetable__item-name">Body Hound</div>
-                  <div class="timetable__item-time">13:25–13:55</div>
-                  <button class="timetable__toggle" data-item-toggle="12">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 33; grid-row-end: 39;">
-                <div class="timetable__item" data-item="13">
-                  <div class="timetable__item-name">Gulfer</div>
-                  <div class="timetable__item-time">14:35–15:05</div>
-                  <button class="timetable__toggle" data-item-toggle="13">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 47; grid-row-end: 53;">
-                <div class="timetable__item" data-item="14">
-                  <div class="timetable__item-name">Svalbard</div>
-                  <div class="timetable__item-time">15:45–16:15</div>
-                  <button class="timetable__toggle" data-item-toggle="14">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 62; grid-row-end: 68;">
-                <div class="timetable__item" data-item="15">
-                  <div class="timetable__item-name">Pijn &amp; Conjurer</div>
-                  <div class="timetable__item-time">17:00–17:30</div>
-                  <button class="timetable__toggle" data-item-toggle="15">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 77; grid-row-end: 86;">
-                <div class="timetable__item" data-item="16">
-                  <div class="timetable__item-name">Bossk</div>
-                  <div class="timetable__item-time">18:15–19:00</div>
-                  <button class="timetable__toggle" data-item-toggle="16">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 95; grid-row-end: 104;">
-                <div class="timetable__item" data-item="17">
-                  <div class="timetable__item-name">Tangled Hair</div>
-                  <div class="timetable__item-time">19:45–20:30</div>
-                  <button class="timetable__toggle" data-item-toggle="17">Toggle item</button>
-                </div>
-              </div>
-            </section>
-          </div>
-        </section>
+						<section class="timetable__location">
+							<h4 class="timetable__header">PX3</h4>
+							<div class="timetable__slot" style="grid-row-start: 5; grid-row-end: 11;">
+								<div class="timetable__item" data-item="11">
+									<div class="timetable__item-name">Cassels</div>
+									<div class="timetable__item-time">12:15–12:45</div>
+									<button class="timetable__toggle" data-item-toggle="11">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 19; grid-row-end: 25;">
+								<div class="timetable__item" data-item="12">
+									<div class="timetable__item-name">Body Hound</div>
+									<div class="timetable__item-time">13:25–13:55</div>
+									<button class="timetable__toggle" data-item-toggle="12">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 33; grid-row-end: 39;">
+								<div class="timetable__item" data-item="13">
+									<div class="timetable__item-name">Gulfer</div>
+									<div class="timetable__item-time">14:35–15:05</div>
+									<button class="timetable__toggle" data-item-toggle="13">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 47; grid-row-end: 53;">
+								<div class="timetable__item" data-item="14">
+									<div class="timetable__item-name">Svalbard</div>
+									<div class="timetable__item-time">15:45–16:15</div>
+									<button class="timetable__toggle" data-item-toggle="14">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 62; grid-row-end: 68;">
+								<div class="timetable__item" data-item="15">
+									<div class="timetable__item-name">Pijn &amp; Conjurer</div>
+									<div class="timetable__item-time">17:00–17:30</div>
+									<button class="timetable__toggle" data-item-toggle="15">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 77; grid-row-end: 86;">
+								<div class="timetable__item" data-item="16">
+									<div class="timetable__item-name">Bossk</div>
+									<div class="timetable__item-time">18:15–19:00</div>
+									<button class="timetable__toggle" data-item-toggle="16">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 95; grid-row-end: 104;">
+								<div class="timetable__item" data-item="17">
+									<div class="timetable__item-name">Tangled Hair</div>
+									<div class="timetable__item-time">19:45–20:30</div>
+									<button class="timetable__toggle" data-item-toggle="17">Toggle item</button>
+								</div>
+							</div>
+						</section>
+					</div>
+				</section>
 
-        <section id="day-20180817" class="fr-tabs__panel js-fr-tabs__panel">
-          <h3 class="visually-hidden">Friday 17 August</h3>
-          <div class="timetable">
-            <section class="timetable__location">
-              <h4 class="timetable__header">Arc</h4>
-              <div class="timetable__slot" style="grid-row-start: 2; grid-row-end: 8;">
-                <div class="timetable__item" data-item="18">
-                  <div class="timetable__item-name">Seven Colour Drive</div>
-                  <div class="timetable__item-time">11:00–11:30</div>
-                  <button class="timetable__toggle" data-item-toggle="18">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 14; grid-row-end: 20;">
-                <div class="timetable__item" data-item="19">
-                  <div class="timetable__item-name">Space Blood</div>
-                  <div class="timetable__item-time">12:00–12:30</div>
-                  <button class="timetable__toggle" data-item-toggle="19">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 26; grid-row-end: 32;">
-                <div class="timetable__item" data-item="20">
-                  <div class="timetable__item-name">Polymath</div>
-                  <div class="timetable__item-time">13:00–13:30</div>
-                  <button class="timetable__toggle" data-item-toggle="20">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 41; grid-row-end: 53;">
-                <div class="timetable__item" data-item="21">
-                  <div class="timetable__item-name">Talons</div>
-                  <div class="timetable__item-time">14:15–15:15</div>
-                  <button class="timetable__toggle" data-item-toggle="21">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 59; grid-row-end: 71;">
-                <div class="timetable__item" data-item="22">
-                  <div class="timetable__item-name">Vennart</div>
-                  <div class="timetable__item-time">15:45–16:45</div>
-                  <button class="timetable__toggle" data-item-toggle="22">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 80; grid-row-end: 92;">
-                <div class="timetable__item" data-item="23">
-                  <div class="timetable__item-name">Pelican</div>
-                  <div class="timetable__item-time">17:30–18:30</div>
-                  <button class="timetable__toggle" data-item-toggle="23">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 104; grid-row-end: 116;">
-                <div class="timetable__item" data-item="24">
-                  <div class="timetable__item-name">Anathema</div>
-                  <div class="timetable__item-time">19:30–20:30</div>
-                  <button class="timetable__toggle" data-item-toggle="24">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 128; grid-row-end: 146;">
-                <div class="timetable__item" data-item="25">
-                  <div class="timetable__item-name">Glassjaw</div>
-                  <div class="timetable__item-time">21:30–23:00</div>
-                  <button class="timetable__toggle" data-item-toggle="25">Toggle item</button>
-                </div>
-              </div>
-            </section>
+				<section id="day-20180817" class="fr-tabs__panel js-fr-tabs__panel">
+					<h3 class="visually-hidden">Friday 17 August</h3>
+					<div class="timetable">
+						<section class="timetable__location">
+							<h4 class="timetable__header">Arc</h4>
+							<div class="timetable__slot" style="grid-row-start: 2; grid-row-end: 8;">
+								<div class="timetable__item" data-item="18">
+									<div class="timetable__item-name">Seven Colour Drive</div>
+									<div class="timetable__item-time">11:00–11:30</div>
+									<button class="timetable__toggle" data-item-toggle="18">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 14; grid-row-end: 20;">
+								<div class="timetable__item" data-item="19">
+									<div class="timetable__item-name">Space Blood</div>
+									<div class="timetable__item-time">12:00–12:30</div>
+									<button class="timetable__toggle" data-item-toggle="19">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 26; grid-row-end: 32;">
+								<div class="timetable__item" data-item="20">
+									<div class="timetable__item-name">Polymath</div>
+									<div class="timetable__item-time">13:00–13:30</div>
+									<button class="timetable__toggle" data-item-toggle="20">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 41; grid-row-end: 53;">
+								<div class="timetable__item" data-item="21">
+									<div class="timetable__item-name">Talons</div>
+									<div class="timetable__item-time">14:15–15:15</div>
+									<button class="timetable__toggle" data-item-toggle="21">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 59; grid-row-end: 71;">
+								<div class="timetable__item" data-item="22">
+									<div class="timetable__item-name">Vennart</div>
+									<div class="timetable__item-time">15:45–16:45</div>
+									<button class="timetable__toggle" data-item-toggle="22">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 80; grid-row-end: 92;">
+								<div class="timetable__item" data-item="23">
+									<div class="timetable__item-name">Pelican</div>
+									<div class="timetable__item-time">17:30–18:30</div>
+									<button class="timetable__toggle" data-item-toggle="23">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 104; grid-row-end: 116;">
+								<div class="timetable__item" data-item="24">
+									<div class="timetable__item-name">Anathema</div>
+									<div class="timetable__item-time">19:30–20:30</div>
+									<button class="timetable__toggle" data-item-toggle="24">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 128; grid-row-end: 146;">
+								<div class="timetable__item" data-item="25">
+									<div class="timetable__item-name">Glassjaw</div>
+									<div class="timetable__item-time">21:30–23:00</div>
+									<button class="timetable__toggle" data-item-toggle="25">Toggle item</button>
+								</div>
+							</div>
+						</section>
 
-            <section class="timetable__location">
-              <h4 class="timetable__header">Yohkai</h4>
-              <div class="timetable__slot" style="grid-row-start: 8; grid-row-end: 14;">
-                <div class="timetable__item" data-item="26">
-                  <div class="timetable__item-name">Blanket</div>
-                  <div class="timetable__item-time">11:30–12:00</div>
-                  <button class="timetable__toggle" data-item-toggle="26">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 20; grid-row-end: 26;">
-                <div class="timetable__item" data-item="27">
-                  <div class="timetable__item-name">Orchards</div>
-                  <div class="timetable__item-time">12:30–13:00</div>
-                  <button class="timetable__toggle" data-item-toggle="27">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 35; grid-row-end: 41;">
-                <div class="timetable__item" data-item="28">
-                  <div class="timetable__item-name">Astralia</div>
-                  <div class="timetable__item-time">13:45–14:15</div>
-                  <button class="timetable__toggle" data-item-toggle="28">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 53; grid-row-end: 59;">
-                <div class="timetable__item" data-item="29">
-                  <div class="timetable__item-name">Mugstar</div>
-                  <div class="timetable__item-time">15:15–15:45</div>
-                  <button class="timetable__toggle" data-item-toggle="29">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 71; grid-row-end: 80;">
-                <div class="timetable__item" data-item="30">
-                  <div class="timetable__item-name">Tides from Nebula</div>
-                  <div class="timetable__item-time">16:45–17:30</div>
-                  <button class="timetable__toggle" data-item-toggle="30">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 92; grid-row-end: 104;">
-                <div class="timetable__item" data-item="31">
-                  <div class="timetable__item-name">Zeal &amp; Ardour</div>
-                  <div class="timetable__item-time">18:30–19:30</div>
-                  <button class="timetable__toggle" data-item-toggle="31">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 116; grid-row-end: 128;">
-                <div class="timetable__item" data-item="32">
-                  <div class="timetable__item-name">Leprous</div>
-                  <div class="timetable__item-time">20:30–21:30</div>
-                  <button class="timetable__toggle" data-item-toggle="32">Toggle item</button>
-                </div>
-              </div>
-            </section>
+						<section class="timetable__location">
+							<h4 class="timetable__header">Yohkai</h4>
+							<div class="timetable__slot" style="grid-row-start: 8; grid-row-end: 14;">
+								<div class="timetable__item" data-item="26">
+									<div class="timetable__item-name">Blanket</div>
+									<div class="timetable__item-time">11:30–12:00</div>
+									<button class="timetable__toggle" data-item-toggle="26">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 20; grid-row-end: 26;">
+								<div class="timetable__item" data-item="27">
+									<div class="timetable__item-name">Orchards</div>
+									<div class="timetable__item-time">12:30–13:00</div>
+									<button class="timetable__toggle" data-item-toggle="27">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 35; grid-row-end: 41;">
+								<div class="timetable__item" data-item="28">
+									<div class="timetable__item-name">Astralia</div>
+									<div class="timetable__item-time">13:45–14:15</div>
+									<button class="timetable__toggle" data-item-toggle="28">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 53; grid-row-end: 59;">
+								<div class="timetable__item" data-item="29">
+									<div class="timetable__item-name">Mugstar</div>
+									<div class="timetable__item-time">15:15–15:45</div>
+									<button class="timetable__toggle" data-item-toggle="29">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 71; grid-row-end: 80;">
+								<div class="timetable__item" data-item="30">
+									<div class="timetable__item-name">Tides from Nebula</div>
+									<div class="timetable__item-time">16:45–17:30</div>
+									<button class="timetable__toggle" data-item-toggle="30">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 92; grid-row-end: 104;">
+								<div class="timetable__item" data-item="31">
+									<div class="timetable__item-name">Zeal &amp; Ardour</div>
+									<div class="timetable__item-time">18:30–19:30</div>
+									<button class="timetable__toggle" data-item-toggle="31">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 116; grid-row-end: 128;">
+								<div class="timetable__item" data-item="32">
+									<div class="timetable__item-name">Leprous</div>
+									<div class="timetable__item-time">20:30–21:30</div>
+									<button class="timetable__toggle" data-item-toggle="32">Toggle item</button>
+								</div>
+							</div>
+						</section>
 
-            <section class="timetable__location">
-              <h4 class="timetable__header">Bixler</h4>
-              <div class="timetable__slot" style="grid-row-start: 8; grid-row-end: 14;">
-                <div class="timetable__item" data-item="33">
-                  <div class="timetable__item-name">Modern Rituals</div>
-                  <div class="timetable__item-time">11:30–12:00</div>
-                  <button class="timetable__toggle" data-item-toggle="33">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 20; grid-row-end: 26;">
-                <div class="timetable__item" data-item="34">
-                  <div class="timetable__item-name">God Mother</div>
-                  <div class="timetable__item-time">12:30–13:00</div>
-                  <button class="timetable__toggle" data-item-toggle="34">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 35; grid-row-end: 41;">
-                <div class="timetable__item" data-item="35">
-                  <div class="timetable__item-name">Bearfoot Beware</div>
-                  <div class="timetable__item-time">13:45–14:15</div>
-                  <button class="timetable__toggle" data-item-toggle="35">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 52; grid-row-end: 58;">
-                <div class="timetable__item" data-item="36">
-                  <div class="timetable__item-name">Conjurer</div>
-                  <div class="timetable__item-time">15:10–15:40</div>
-                  <button class="timetable__toggle" data-item-toggle="36">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 71; grid-row-end: 80;">
-                <div class="timetable__item" data-item="37">
-                  <div class="timetable__item-name">Halo Tora</div>
-                  <div class="timetable__item-time">16:45–17:30</div>
-                  <button class="timetable__toggle" data-item-toggle="37">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 92; grid-row-end: 104;">
-                <div class="timetable__item" data-item="38">
-                  <div class="timetable__item-name">Strobes</div>
-                  <div class="timetable__item-time">18:30–19:30</div>
-                  <button class="timetable__toggle" data-item-toggle="38">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 116; grid-row-end: 128;">
-                <div class="timetable__item" data-item="39">
-                  <div class="timetable__item-name">Tides of Man</div>
-                  <div class="timetable__item-time">20:30–21:30</div>
-                  <button class="timetable__toggle" data-item-toggle="39">Toggle item</button>
-                </div>
-              </div>
-            </section>
+						<section class="timetable__location">
+							<h4 class="timetable__header">Bixler</h4>
+							<div class="timetable__slot" style="grid-row-start: 8; grid-row-end: 14;">
+								<div class="timetable__item" data-item="33">
+									<div class="timetable__item-name">Modern Rituals</div>
+									<div class="timetable__item-time">11:30–12:00</div>
+									<button class="timetable__toggle" data-item-toggle="33">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 20; grid-row-end: 26;">
+								<div class="timetable__item" data-item="34">
+									<div class="timetable__item-name">God Mother</div>
+									<div class="timetable__item-time">12:30–13:00</div>
+									<button class="timetable__toggle" data-item-toggle="34">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 35; grid-row-end: 41;">
+								<div class="timetable__item" data-item="35">
+									<div class="timetable__item-name">Bearfoot Beware</div>
+									<div class="timetable__item-time">13:45–14:15</div>
+									<button class="timetable__toggle" data-item-toggle="35">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 52; grid-row-end: 58;">
+								<div class="timetable__item" data-item="36">
+									<div class="timetable__item-name">Conjurer</div>
+									<div class="timetable__item-time">15:10–15:40</div>
+									<button class="timetable__toggle" data-item-toggle="36">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 71; grid-row-end: 80;">
+								<div class="timetable__item" data-item="37">
+									<div class="timetable__item-name">Halo Tora</div>
+									<div class="timetable__item-time">16:45–17:30</div>
+									<button class="timetable__toggle" data-item-toggle="37">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 92; grid-row-end: 104;">
+								<div class="timetable__item" data-item="38">
+									<div class="timetable__item-name">Strobes</div>
+									<div class="timetable__item-time">18:30–19:30</div>
+									<button class="timetable__toggle" data-item-toggle="38">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 116; grid-row-end: 128;">
+								<div class="timetable__item" data-item="39">
+									<div class="timetable__item-name">Tides of Man</div>
+									<div class="timetable__item-time">20:30–21:30</div>
+									<button class="timetable__toggle" data-item-toggle="39">Toggle item</button>
+								</div>
+							</div>
+						</section>
 
-            <section class="timetable__location">
-              <h4 class="timetable__header">PX3</h4>
-              <div class="timetable__slot" style="grid-row-start: 2; grid-row-end: 8;">
-                <div class="timetable__item" data-item="40">
-                  <div class="timetable__item-name">Natalie Evans</div>
-                  <div class="timetable__item-time">11:00–11:30</div>
-                  <button class="timetable__toggle" data-item-toggle="40">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 14; grid-row-end: 20;">
-                <div class="timetable__item" data-item="41">
-                  <div class="timetable__item-name">Codicies</div>
-                  <div class="timetable__item-time">12:00–12:30</div>
-                  <button class="timetable__toggle" data-item-toggle="41">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 26; grid-row-end: 32;">
-                <div class="timetable__item" data-item="42">
-                  <div class="timetable__item-name">Wren</div>
-                  <div class="timetable__item-time">13:00–13:30</div>
-                  <button class="timetable__toggle" data-item-toggle="42">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 41; grid-row-end: 47;">
-                <div class="timetable__item" data-item="43">
-                  <div class="timetable__item-name">Mr Marcaille</div>
-                  <div class="timetable__item-time">14:15–14:45</div>
-                  <button class="timetable__toggle" data-item-toggle="43">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 59; grid-row-end: 65;">
-                <div class="timetable__item" data-item="44">
-                  <div class="timetable__item-name">Jo Quail</div>
-                  <div class="timetable__item-time">15:45–16:15</div>
-                  <button class="timetable__toggle" data-item-toggle="44">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 80; grid-row-end: 86;">
-                <div class="timetable__item" data-item="45">
-                  <div class="timetable__item-name">Black Futures</div>
-                  <div class="timetable__item-time">17:30–18:00</div>
-                  <button class="timetable__toggle" data-item-toggle="45">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 104; grid-row-end: 116;">
-                <div class="timetable__item" data-item="46">
-                  <div class="timetable__item-name">Blueneck</div>
-                  <div class="timetable__item-time">19:30–20:30</div>
-                  <button class="timetable__toggle" data-item-toggle="46">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 128; grid-row-end: 146;">
-                <div class="timetable__item" data-item="47">
-                  <div class="timetable__item-name">Behind the Shadow Drops</div>
-                  <div class="timetable__item-time">21:30–23:00</div>
-                  <button class="timetable__toggle" data-item-toggle="47">Toggle item</button>
-                </div>
-              </div>
-            </section>
-          </div>
-        </section>
+						<section class="timetable__location">
+							<h4 class="timetable__header">PX3</h4>
+							<div class="timetable__slot" style="grid-row-start: 2; grid-row-end: 8;">
+								<div class="timetable__item" data-item="40">
+									<div class="timetable__item-name">Natalie Evans</div>
+									<div class="timetable__item-time">11:00–11:30</div>
+									<button class="timetable__toggle" data-item-toggle="40">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 14; grid-row-end: 20;">
+								<div class="timetable__item" data-item="41">
+									<div class="timetable__item-name">Codicies</div>
+									<div class="timetable__item-time">12:00–12:30</div>
+									<button class="timetable__toggle" data-item-toggle="41">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 26; grid-row-end: 32;">
+								<div class="timetable__item" data-item="42">
+									<div class="timetable__item-name">Wren</div>
+									<div class="timetable__item-time">13:00–13:30</div>
+									<button class="timetable__toggle" data-item-toggle="42">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 41; grid-row-end: 47;">
+								<div class="timetable__item" data-item="43">
+									<div class="timetable__item-name">Mr Marcaille</div>
+									<div class="timetable__item-time">14:15–14:45</div>
+									<button class="timetable__toggle" data-item-toggle="43">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 59; grid-row-end: 65;">
+								<div class="timetable__item" data-item="44">
+									<div class="timetable__item-name">Jo Quail</div>
+									<div class="timetable__item-time">15:45–16:15</div>
+									<button class="timetable__toggle" data-item-toggle="44">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 80; grid-row-end: 86;">
+								<div class="timetable__item" data-item="45">
+									<div class="timetable__item-name">Black Futures</div>
+									<div class="timetable__item-time">17:30–18:00</div>
+									<button class="timetable__toggle" data-item-toggle="45">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 104; grid-row-end: 116;">
+								<div class="timetable__item" data-item="46">
+									<div class="timetable__item-name">Blueneck</div>
+									<div class="timetable__item-time">19:30–20:30</div>
+									<button class="timetable__toggle" data-item-toggle="46">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 128; grid-row-end: 146;">
+								<div class="timetable__item" data-item="47">
+									<div class="timetable__item-name">Behind the Shadow Drops</div>
+									<div class="timetable__item-time">21:30–23:00</div>
+									<button class="timetable__toggle" data-item-toggle="47">Toggle item</button>
+								</div>
+							</div>
+						</section>
+					</div>
+				</section>
 
-        <section id="day-20180818" class="fr-tabs__panel js-fr-tabs__panel">
-          <h3 class="visually-hidden">Saturday 18 August</h3>
-          <div class="timetable">
-            <section class="timetable__location">
-              <h4 class="timetable__header">Arc</h4>
-              <div class="timetable__slot" style="grid-row-start: 2; grid-row-end: 8;">
-                <div class="timetable__item" data-item="48">
-                  <div class="timetable__item-name">Trigger Thumb</div>
-                  <div class="timetable__item-time">11:00–11:30</div>
-                  <button class="timetable__toggle" data-item-toggle="48">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 14; grid-row-end: 20;">
-                <div class="timetable__item" data-item="49">
-                  <div class="timetable__item-name">Hey Colossus</div>
-                  <div class="timetable__item-time">12:00–12:30</div>
-                  <button class="timetable__toggle" data-item-toggle="49">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 26; grid-row-end: 32;">
-                <div class="timetable__item" data-item="50">
-                  <div class="timetable__item-name">Jean Jean</div>
-                  <div class="timetable__item-time">13:00–13:30</div>
-                  <button class="timetable__toggle" data-item-toggle="50">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 38; grid-row-end: 50;">
-                <div class="timetable__item" data-item="51">
-                  <div class="timetable__item-name">Plini</div>
-                  <div class="timetable__item-time">14:00–15:00</div>
-                  <button class="timetable__toggle" data-item-toggle="51">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 56; grid-row-end: 68;">
-                <div class="timetable__item" data-item="52">
-                  <div class="timetable__item-name">Giraffes? Giraffes!</div>
-                  <div class="timetable__item-time">15:30–16:30</div>
-                  <button class="timetable__toggle" data-item-toggle="52">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 74; grid-row-end: 87;">
-                <div class="timetable__item" data-item="53">
-                  <div class="timetable__item-name">Myrkur</div>
-                  <div class="timetable__item-time">17:00–18:05</div>
-                  <button class="timetable__toggle" data-item-toggle="53">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 100; grid-row-end: 111;">
-                <div class="timetable__item" data-item="54">
-                  <div class="timetable__item-name">Alcest</div>
-                  <div class="timetable__item-time">19:10–20:05</div>
-                  <button class="timetable__toggle" data-item-toggle="54">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 128; grid-row-end: 146;">
-                <div class="timetable__item" data-item="55">
-                  <div class="timetable__item-name">Shellac</div>
-                  <div class="timetable__item-time">21:30–23:00</div>
-                  <button class="timetable__toggle" data-item-toggle="55">Toggle item</button>
-                </div>
-              </div>
-            </section>
+				<section id="day-20180818" class="fr-tabs__panel js-fr-tabs__panel">
+					<h3 class="visually-hidden">Saturday 18 August</h3>
+					<div class="timetable">
+						<section class="timetable__location">
+							<h4 class="timetable__header">Arc</h4>
+							<div class="timetable__slot" style="grid-row-start: 2; grid-row-end: 8;">
+								<div class="timetable__item" data-item="48">
+									<div class="timetable__item-name">Trigger Thumb</div>
+									<div class="timetable__item-time">11:00–11:30</div>
+									<button class="timetable__toggle" data-item-toggle="48">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 14; grid-row-end: 20;">
+								<div class="timetable__item" data-item="49">
+									<div class="timetable__item-name">Hey Colossus</div>
+									<div class="timetable__item-time">12:00–12:30</div>
+									<button class="timetable__toggle" data-item-toggle="49">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 26; grid-row-end: 32;">
+								<div class="timetable__item" data-item="50">
+									<div class="timetable__item-name">Jean Jean</div>
+									<div class="timetable__item-time">13:00–13:30</div>
+									<button class="timetable__toggle" data-item-toggle="50">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 38; grid-row-end: 50;">
+								<div class="timetable__item" data-item="51">
+									<div class="timetable__item-name">Plini</div>
+									<div class="timetable__item-time">14:00–15:00</div>
+									<button class="timetable__toggle" data-item-toggle="51">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 56; grid-row-end: 68;">
+								<div class="timetable__item" data-item="52">
+									<div class="timetable__item-name">Giraffes? Giraffes!</div>
+									<div class="timetable__item-time">15:30–16:30</div>
+									<button class="timetable__toggle" data-item-toggle="52">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 74; grid-row-end: 87;">
+								<div class="timetable__item" data-item="53">
+									<div class="timetable__item-name">Myrkur</div>
+									<div class="timetable__item-time">17:00–18:05</div>
+									<button class="timetable__toggle" data-item-toggle="53">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 100; grid-row-end: 111;">
+								<div class="timetable__item" data-item="54">
+									<div class="timetable__item-name">Alcest</div>
+									<div class="timetable__item-time">19:10–20:05</div>
+									<button class="timetable__toggle" data-item-toggle="54">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 128; grid-row-end: 146;">
+								<div class="timetable__item" data-item="55">
+									<div class="timetable__item-name">Shellac</div>
+									<div class="timetable__item-time">21:30–23:00</div>
+									<button class="timetable__toggle" data-item-toggle="55">Toggle item</button>
+								</div>
+							</div>
+						</section>
 
-            <section class="timetable__location">
-              <h4 class="timetable__header">Yohkai</h4>
-              <div class="timetable__slot" style="grid-row-start: 8; grid-row-end: 14;">
-                <div class="timetable__item" data-item="56">
-                  <div class="timetable__item-name">Only Echoes Remain</div>
-                  <div class="timetable__item-time">11:30–12:00</div>
-                  <button class="timetable__toggle" data-item-toggle="56">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 20; grid-row-end: 26;">
-                <div class="timetable__item" data-item="57">
-                  <div class="timetable__item-name">La Jungle</div>
-                  <div class="timetable__item-time">12:30–13:00</div>
-                  <button class="timetable__toggle" data-item-toggle="57">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 32; grid-row-end: 38;">
-                <div class="timetable__item" data-item="58">
-                  <div class="timetable__item-name">Bad Sign</div>
-                  <div class="timetable__item-time">13:30–14:00</div>
-                  <button class="timetable__toggle" data-item-toggle="58">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 50; grid-row-end: 56;">
-                <div class="timetable__item" data-item="59">
-                  <div class="timetable__item-name">Telepathy</div>
-                  <div class="timetable__item-time">15:00–15:30</div>
-                  <button class="timetable__toggle" data-item-toggle="59">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 68; grid-row-end: 74;">
-                <div class="timetable__item" data-item="60">
-                  <div class="timetable__item-name">Black Peaks</div>
-                  <div class="timetable__item-time">16:30–17:00</div>
-                  <button class="timetable__toggle" data-item-toggle="60">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 88; grid-row-end: 98;">
-                <div class="timetable__item" data-item="61">
-                  <div class="timetable__item-name">Mouse on the Keys</div>
-                  <div class="timetable__item-time">18:10–19:00</div>
-                  <button class="timetable__toggle" data-item-toggle="61">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 113; grid-row-end: 126;">
-                <div class="timetable__item" data-item="62">
-                  <div class="timetable__item-name">Arcane Roots</div>
-                  <div class="timetable__item-time">20:15–21:20</div>
-                  <button class="timetable__toggle" data-item-toggle="62">Toggle item</button>
-                </div>
-              </div>
-            </section>
+						<section class="timetable__location">
+							<h4 class="timetable__header">Yohkai</h4>
+							<div class="timetable__slot" style="grid-row-start: 8; grid-row-end: 14;">
+								<div class="timetable__item" data-item="56">
+									<div class="timetable__item-name">Only Echoes Remain</div>
+									<div class="timetable__item-time">11:30–12:00</div>
+									<button class="timetable__toggle" data-item-toggle="56">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 20; grid-row-end: 26;">
+								<div class="timetable__item" data-item="57">
+									<div class="timetable__item-name">La Jungle</div>
+									<div class="timetable__item-time">12:30–13:00</div>
+									<button class="timetable__toggle" data-item-toggle="57">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 32; grid-row-end: 38;">
+								<div class="timetable__item" data-item="58">
+									<div class="timetable__item-name">Bad Sign</div>
+									<div class="timetable__item-time">13:30–14:00</div>
+									<button class="timetable__toggle" data-item-toggle="58">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 50; grid-row-end: 56;">
+								<div class="timetable__item" data-item="59">
+									<div class="timetable__item-name">Telepathy</div>
+									<div class="timetable__item-time">15:00–15:30</div>
+									<button class="timetable__toggle" data-item-toggle="59">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 68; grid-row-end: 74;">
+								<div class="timetable__item" data-item="60">
+									<div class="timetable__item-name">Black Peaks</div>
+									<div class="timetable__item-time">16:30–17:00</div>
+									<button class="timetable__toggle" data-item-toggle="60">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 88; grid-row-end: 98;">
+								<div class="timetable__item" data-item="61">
+									<div class="timetable__item-name">Mouse on the Keys</div>
+									<div class="timetable__item-time">18:10–19:00</div>
+									<button class="timetable__toggle" data-item-toggle="61">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 113; grid-row-end: 126;">
+								<div class="timetable__item" data-item="62">
+									<div class="timetable__item-name">Arcane Roots</div>
+									<div class="timetable__item-time">20:15–21:20</div>
+									<button class="timetable__toggle" data-item-toggle="62">Toggle item</button>
+								</div>
+							</div>
+						</section>
 
-            <section class="timetable__location">
-              <h4 class="timetable__header">Bixler</h4>
-              <div class="timetable__slot" style="grid-row-start: 8; grid-row-end: 14;">
-                <div class="timetable__item" data-item="63">
-                  <div class="timetable__item-name">Death and the Penguin</div>
-                  <div class="timetable__item-time">11:30–12:00</div>
-                  <button class="timetable__toggle" data-item-toggle="63">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 20; grid-row-end: 26;">
-                <div class="timetable__item" data-item="64">
-                  <div class="timetable__item-name">Ilenkus</div>
-                  <div class="timetable__item-time">12:30–13:00</div>
-                  <button class="timetable__toggle" data-item-toggle="64">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 32; grid-row-end: 38;">
-                <div class="timetable__item" data-item="65">
-                  <div class="timetable__item-name">Vasquez</div>
-                  <div class="timetable__item-time">13:30–14:00</div>
-                  <button class="timetable__toggle" data-item-toggle="65">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 50; grid-row-end: 56;">
-                <div class="timetable__item" data-item="66">
-                  <div class="timetable__item-name">Arcane Roots (Electronic)</div>
-                  <div class="timetable__item-time">15:00–15:30</div>
-                  <button class="timetable__toggle" data-item-toggle="66">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 68; grid-row-end: 74;">
-                <div class="timetable__item" data-item="67">
-                  <div class="timetable__item-name">Gug</div>
-                  <div class="timetable__item-time">16:30–17:00</div>
-                  <button class="timetable__toggle" data-item-toggle="67">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 89; grid-row-end: 98;">
-                <div class="timetable__item" data-item="68">
-                  <div class="timetable__item-name">Part Chimp</div>
-                  <div class="timetable__item-time">18:15–19:00</div>
-                  <button class="timetable__toggle" data-item-toggle="68">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 113; grid-row-end: 126;">
-                <div class="timetable__item" data-item="69">
-                  <div class="timetable__item-name">Pigs Pigs Pigs Pigs Pigs Pigs Pigs</div>
-                  <div class="timetable__item-time">20:15–21:20</div>
-                  <button class="timetable__toggle" data-item-toggle="69">Toggle item</button>
-                </div>
-              </div>
-            </section>
+						<section class="timetable__location">
+							<h4 class="timetable__header">Bixler</h4>
+							<div class="timetable__slot" style="grid-row-start: 8; grid-row-end: 14;">
+								<div class="timetable__item" data-item="63">
+									<div class="timetable__item-name">Death and the Penguin</div>
+									<div class="timetable__item-time">11:30–12:00</div>
+									<button class="timetable__toggle" data-item-toggle="63">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 20; grid-row-end: 26;">
+								<div class="timetable__item" data-item="64">
+									<div class="timetable__item-name">Ilenkus</div>
+									<div class="timetable__item-time">12:30–13:00</div>
+									<button class="timetable__toggle" data-item-toggle="64">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 32; grid-row-end: 38;">
+								<div class="timetable__item" data-item="65">
+									<div class="timetable__item-name">Vasquez</div>
+									<div class="timetable__item-time">13:30–14:00</div>
+									<button class="timetable__toggle" data-item-toggle="65">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 50; grid-row-end: 56;">
+								<div class="timetable__item" data-item="66">
+									<div class="timetable__item-name">Arcane Roots (Electronic)</div>
+									<div class="timetable__item-time">15:00–15:30</div>
+									<button class="timetable__toggle" data-item-toggle="66">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 68; grid-row-end: 74;">
+								<div class="timetable__item" data-item="67">
+									<div class="timetable__item-name">Gug</div>
+									<div class="timetable__item-time">16:30–17:00</div>
+									<button class="timetable__toggle" data-item-toggle="67">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 89; grid-row-end: 98;">
+								<div class="timetable__item" data-item="68">
+									<div class="timetable__item-name">Part Chimp</div>
+									<div class="timetable__item-time">18:15–19:00</div>
+									<button class="timetable__toggle" data-item-toggle="68">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 113; grid-row-end: 126;">
+								<div class="timetable__item" data-item="69">
+									<div class="timetable__item-name">Pigs Pigs Pigs Pigs Pigs Pigs Pigs</div>
+									<div class="timetable__item-time">20:15–21:20</div>
+									<button class="timetable__toggle" data-item-toggle="69">Toggle item</button>
+								</div>
+							</div>
+						</section>
 
-            <section class="timetable__location">
-              <h4 class="timetable__header">PX3</h4>
-              <div class="timetable__slot" style="grid-row-start: 2; grid-row-end: 8;">
-                <div class="timetable__item" data-item="70">
-                  <div class="timetable__item-name">The Big Massive Orchestra</div>
-                  <div class="timetable__item-time">11:00–11:30</div>
-                  <button class="timetable__toggle" data-item-toggle="70">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 14; grid-row-end: 20;">
-                <div class="timetable__item" data-item="71">
-                  <div class="timetable__item-name">Sœur</div>
-                  <div class="timetable__item-time">12:00–12:30</div>
-                  <button class="timetable__toggle" data-item-toggle="71">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 26; grid-row-end: 32;">
-                <div class="timetable__item" data-item="72">
-                  <div class="timetable__item-name">VLMV</div>
-                  <div class="timetable__item-time">13:00–13:30</div>
-                  <button class="timetable__toggle" data-item-toggle="72">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 38; grid-row-end: 44;">
-                <div class="timetable__item" data-item="73">
-                  <div class="timetable__item-name">MØL</div>
-                  <div class="timetable__item-time">14:00–14:30</div>
-                  <button class="timetable__toggle" data-item-toggle="73">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 55; grid-row-end: 63;">
-                <div class="timetable__item" data-item="74">
-                  <div class="timetable__item-name">Coldbones</div>
-                  <div class="timetable__item-time">15:25–16:05</div>
-                  <button class="timetable__toggle" data-item-toggle="74">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 74; grid-row-end: 80;">
-                <div class="timetable__item" data-item="75">
-                  <div class="timetable__item-name">The Guru Guru</div>
-                  <div class="timetable__item-time">17:00–17:30</div>
-                  <button class="timetable__toggle" data-item-toggle="75">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 100; grid-row-end: 106;">
-                <div class="timetable__item" data-item="76">
-                  <div class="timetable__item-name">Toska</div>
-                  <div class="timetable__item-time">19:10–19:40</div>
-                  <button class="timetable__toggle" data-item-toggle="76">Toggle item</button>
-                </div>
-              </div>
-              <div class="timetable__slot" style="grid-row-start: 128; grid-row-end: 137;">
-                <div class="timetable__item" data-item="77">
-                  <div class="timetable__item-name">Scalping</div>
-                  <div class="timetable__item-time">21:30–22:15</div>
-                  <button class="timetable__toggle" data-item-toggle="77">Toggle item</button>
-                </div>
-              </div>
-            </section>
-          </div>
-        </section>
+						<section class="timetable__location">
+							<h4 class="timetable__header">PX3</h4>
+							<div class="timetable__slot" style="grid-row-start: 2; grid-row-end: 8;">
+								<div class="timetable__item" data-item="70">
+									<div class="timetable__item-name">The Big Massive Orchestra</div>
+									<div class="timetable__item-time">11:00–11:30</div>
+									<button class="timetable__toggle" data-item-toggle="70">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 14; grid-row-end: 20;">
+								<div class="timetable__item" data-item="71">
+									<div class="timetable__item-name">Sœur</div>
+									<div class="timetable__item-time">12:00–12:30</div>
+									<button class="timetable__toggle" data-item-toggle="71">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 26; grid-row-end: 32;">
+								<div class="timetable__item" data-item="72">
+									<div class="timetable__item-name">VLMV</div>
+									<div class="timetable__item-time">13:00–13:30</div>
+									<button class="timetable__toggle" data-item-toggle="72">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 38; grid-row-end: 44;">
+								<div class="timetable__item" data-item="73">
+									<div class="timetable__item-name">MØL</div>
+									<div class="timetable__item-time">14:00–14:30</div>
+									<button class="timetable__toggle" data-item-toggle="73">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 55; grid-row-end: 63;">
+								<div class="timetable__item" data-item="74">
+									<div class="timetable__item-name">Coldbones</div>
+									<div class="timetable__item-time">15:25–16:05</div>
+									<button class="timetable__toggle" data-item-toggle="74">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 74; grid-row-end: 80;">
+								<div class="timetable__item" data-item="75">
+									<div class="timetable__item-name">The Guru Guru</div>
+									<div class="timetable__item-time">17:00–17:30</div>
+									<button class="timetable__toggle" data-item-toggle="75">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 100; grid-row-end: 106;">
+								<div class="timetable__item" data-item="76">
+									<div class="timetable__item-name">Toska</div>
+									<div class="timetable__item-time">19:10–19:40</div>
+									<button class="timetable__toggle" data-item-toggle="76">Toggle item</button>
+								</div>
+							</div>
+							<div class="timetable__slot" style="grid-row-start: 128; grid-row-end: 137;">
+								<div class="timetable__item" data-item="77">
+									<div class="timetable__item-name">Scalping</div>
+									<div class="timetable__item-time">21:30–22:15</div>
+									<button class="timetable__toggle" data-item-toggle="77">Toggle item</button>
+								</div>
+							</div>
+						</section>
+					</div>
+				</section>
 
-      </div>
+			</div>
 
-    </section>
+		</section>
 
-  </main>
+	</main>
 
-  <script src="./js/index.js"></script>
+	<script src="./js/index.js"></script>
 
 </html>
