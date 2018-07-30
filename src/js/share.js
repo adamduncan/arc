@@ -29,10 +29,9 @@ function share () {
 
   if (navigator.share !== undefined) {
     shareNative(sharePath)
-    return
+  } else {
+    shareCustom(sharePath)
   }
-
-  shareCustom(sharePath)
 }
 
 function shareNative (sharePath) {

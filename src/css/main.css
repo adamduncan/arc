@@ -45,6 +45,15 @@ li {
 	margin: 0;
 }
 
+img {
+	height: auto;
+	max-width: 100%;
+	width: 100%;
+}
+svg {
+	height: auto;
+}
+
 h1 {
 	font-weight: 400;
 	margin-bottom: 0.2em;
@@ -318,6 +327,7 @@ main {
 }
 
 .modal__close {
+	background-color: transparent;
 	background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20height%3D%22451%22%20width%3D%22451%22%20fill%3D%22%230361CE%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Ctitle%3Ecross%3C/title%3E%3Cpath%20d%3D%22M9.5%208L14%203.5%2012.5%202%208%206.5%203.5%202%202%203.5%206.5%208%202%2012.5%203.5%2014%208%209.5l4.5%204.5%201.5-1.5L9.5%208%22%20fill%3D%22%230361CE%22%20fill-rule%3D%22evenodd%22/%3E%3C/svg%3E');
 	background-position: center;
 	background-repeat: no-repeat;
@@ -350,6 +360,7 @@ main {
 
 /* LINKS */
 .link-icon {
+	background-color: transparent;
 	border: 0;
 	border-bottom-color: transparent;
 	color: #0361CE;
