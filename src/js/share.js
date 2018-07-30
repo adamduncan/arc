@@ -28,10 +28,9 @@ function share () {
   const sharePath = `${siteUrl}/${fragmentPrefix}${shareCode}`
 
   if (navigator && navigator.share !== undefined) {
-    shareNative(sharePath)
-    return
+    return shareNative(sharePath)
   } else {
-    shareCustom(sharePath)
+    return shareCustom(sharePath)
   }
 }
 
