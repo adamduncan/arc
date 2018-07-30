@@ -27,8 +27,9 @@ function share () {
   const shareCode = window.btoa(localSelections)
   const sharePath = `${siteUrl}/${fragmentPrefix}${shareCode}`
 
-  if (navigator.share !== undefined) {
+  if (navigator && navigator.share !== undefined) {
     shareNative(sharePath)
+    return
   } else {
     shareCustom(sharePath)
   }
