@@ -56,7 +56,7 @@ svg {
 
 h1 {
 	font-weight: 400;
-	margin-bottom: 0.2em;
+	margin-bottom: 0.5em;
 }
 
 h2 {
@@ -76,7 +76,7 @@ a:focus {
 }
 
 header {
-	margin-bottom: 4rem;
+	margin-bottom: 3rem;
 }
 
 main {
@@ -281,10 +281,12 @@ main {
 }
 
 /* Modal */
+[id="share-modal"] {
+	position: fixed;
+}
 .modal--is-ready {
 	height: 100%;
 	left: 0;
-	position: fixed;
 	top: 0;
 	transition: background-color 200ms ease-out, visibility 200ms ease-out;
 	width: 100%;
@@ -369,6 +371,7 @@ main {
 	color: #0361CE;
 	cursor: pointer;
 	display: inline-block;
+	font-family: inherit;
 	font-size: 1rem;
 	padding: 0.2em 0.2em 0.2em;
 	position: relative;

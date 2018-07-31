@@ -4,11 +4,12 @@ import { storageUserId, fragmentPrefix } from './schedule'
 
 const siteUrl = 'https://arctangent.netlify.com'
 const shareButton = document.querySelector('[data-share]')
-const shareModal = Frdialogmodal({
-  openSelector: '[data-share]',
-  readyClass: 'modal--is-ready',
-  activeClass: 'modal--is-active'
-});
+const shareModal = (navigator.share === undefined) ?
+  Frdialogmodal({
+    openSelector: '[data-share]',
+    readyClass: 'modal--is-ready',
+    activeClass: 'modal--is-active'
+  }) : null
 const shareLinkAttr = 'data-share-link'
 const shareLinks = document.querySelectorAll(`[${shareLinkAttr}]`)
 
@@ -27,10 +28,10 @@ function share () {
   const shareCode = window.btoa(localSelections)
   const sharePath = `${siteUrl}/${fragmentPrefix}${shareCode}`
 
-  if (navigator && navigator.share !== undefined) {
-    return shareNative(sharePath)
+  if (navigator.share !== undefined) {
+    shareNative(sharePath)
   } else {
-    return shareCustom(sharePath)
+    shareCustom(sharePath)
   }
 }
 
