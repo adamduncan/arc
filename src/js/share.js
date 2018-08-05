@@ -3,8 +3,10 @@ import ClipboardJS from 'clipboard';
 import { storageUserId, fragmentPrefix } from './schedule'
 
 const siteUrl = 'https://arctangent.netlify.com'
+const isNativeShare = navigator.share !== undefined
+
 const shareButton = document.querySelector('[data-share]')
-const shareModal = (navigator.share === undefined) ?
+const shareModal = !isNativeShare ?
   Frdialogmodal({
     openSelector: '[data-share]',
     readyClass: 'modal--is-ready',
@@ -19,7 +21,15 @@ const copyHiddenInput = document.getElementById('copy-link')
 // bindings
 function bindClickEvents () {
   shareButton.addEventListener('click', share)
-  copyButton.addEventListener('click', copyToClipboard)
+  if (isNativeShare) return
+
+  const clipboard = new ClipboardJS(copyButton)
+  clipboard.on('success', e => {
+    copiedToClipboard(e.trigger)
+  })
+  clipboard.on('error', e => {
+    console.error('Could not copy to clipboard');
+  });
 }
 
 // actions
@@ -70,26 +80,22 @@ function shareCustom (sharePath) {
         shareLink.setAttribute('href', `https://twitter.com/intent/tweet?text=${encodedMsg}&url=${encodedUrl}`)
         break;
       }
-      case 'link': {
-        shareLink.setAttribute('data-clipboard-text', sharePath)
-      }
       default:
-        console.log(`Could not add link for share type: ${ type }`)
+        console.error(`Could not add link for share type: ${ type }`)
     }
   })
 }
 
-function copyToClipboard (e) {
-  const copyInit = new ClipboardJS(e.currentTarget);
+function copiedToClipboard (triggerEl) {
   const copiedTextAttr = 'data-copied-text'
-  const copiedTextEl = copyButton.querySelector(`[${copiedTextAttr}]`)
+  const copiedTextEl = triggerEl.querySelector(`[${copiedTextAttr}]`)
   const originalText = copiedTextEl.innerHTML
   copiedTextEl.innerHTML = copiedTextEl.getAttribute(copiedTextAttr)
 
   const copiedTimeout = setTimeout(() => {
     copiedTextEl.innerHTML = originalText
     clearTimeout(copiedTimeout)
-  }, 1000)
+  }, 1200)
 }
 
 function init () {

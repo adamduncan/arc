@@ -65,13 +65,15 @@ h2 {
 }
 
 a {
-	border-bottom: 1px solid #68adfc;
 	color: #0361CE;
 	text-decoration: none;
+}
+.richtext a {
+	border-bottom: 1px solid #68adfc;
 	transition: border 100ms ease-out;
 }
-a:hover,
-a:focus {
+.richtext a:hover,
+.richtext a:focus {
 	border-bottom-color: #0361CE;
 }
 
