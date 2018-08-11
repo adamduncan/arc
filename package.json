@@ -18,7 +18,8 @@
   "dependencies": {
     "clipboard": "^2.0.1",
     "flickity": "^2.1.2",
-    "fr-dialogmodal": "^1.0.4"
+    "fr-dialogmodal": "^1.0.4",
+    "stickybits": "^3.4.1"
   },
   "devDependencies": {
     "autoprefixer": "^8.6.5",

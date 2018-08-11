@@ -1,4 +1,5 @@
 import Flickity from 'flickity'
+import stickybits from 'stickybits'
 import schedule from './schedule'
 import share from './share'
 
@@ -8,6 +9,10 @@ const rAFSupported = window.requestAnimationFrame
 
 // CAROUSEL
 document.scrollingElement.style.overflowX = 'hidden'
+stickybits('.timetable__header', {
+  stickyBitStickyOffset: 49,
+  useStickyClasses: true
+})
 
 const scrollToTimetable = () => {
   if (!timetableEl || timetableTop === window.scrollY) return
