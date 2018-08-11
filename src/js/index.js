@@ -21,6 +21,7 @@ const flkty = new Flickity('[data-carousel]', {
   prevNextButtons: false,
   pageDots: false
 })
+
 const slideButtons = document.querySelectorAll('[data-carousel-button]');
 slideButtons.forEach((slideButton, i) => {
   slideButton.addEventListener('click', event => {
