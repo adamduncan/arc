@@ -93,6 +93,14 @@ main {
 }
 
 @supports (display: grid) {
+	.sticky-sentinel {
+		height: 0;
+		pointer-events: none;
+		position: sticky;
+		top: 0;
+		width: 0;
+	}
+
 	.timetable {
 		background-image: repeating-linear-gradient(to bottom, #ccc, #ccc 1px, transparent 1px, transparent 13.5rem);
 		background-position: 0 37.5px; /* Offset height of header row */

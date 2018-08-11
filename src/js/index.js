@@ -9,11 +9,12 @@ const rAFSupported = window.requestAnimationFrame
 const timetableEl = document.getElementById('timetable')
 const timetableTop = timetableEl ? timetableEl.offsetTop : 0
 const timetableHeaders = document.querySelectorAll('[data-timetable-header]')
+const stickySentinelEl = document.querySelector('.sticky-sentinel')
 
 // CAROUSEL
 const positionStickyHeader = scrollPos => {
   if (scrollPos > timetableTop) {
-    const offsetDistance = scrollPos - timetableTop
+    const offsetDistance = stickySentinelEl.offsetTop - timetableTop
     timetableHeaders.forEach(timetableHeader => timetableHeader.style.transform = `translateY(${offsetDistance}px)`)
   } else {
     timetableHeaders.forEach(timetableHeader => timetableHeader.style.transform = 'none')
@@ -23,7 +24,7 @@ const positionStickyHeader = scrollPos => {
 const scrollToTimetable = () => {
   if (!timetableEl || timetableTop === window.scrollY) return
   window.scroll({ 
-    top: timetableTop + 1, // subpixel fix
+    top: timetableTop,
     left: 0
     // behavior: 'smooth'
   });
