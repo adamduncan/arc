@@ -7,6 +7,8 @@ const timetableTop = timetableEl ? timetableEl.offsetTop : 0
 const rAFSupported = window.requestAnimationFrame
 
 // CAROUSEL
+document.scrollingElement.style.overflowX = 'hidden'
+
 const scrollToTimetable = () => {
   if (!timetableEl || timetableTop === window.scrollY) return
   window.scroll({ 
