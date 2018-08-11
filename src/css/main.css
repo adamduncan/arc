@@ -123,6 +123,7 @@ main {
 		grid-row-end: 2;
 		padding: 1em  0.833em 0.833em; /* 10px from 12 */
 		text-align: center;
+		will-change: transform;
 		z-index: 2;
 	}
 	.timetable__location:not(:last-child) .timetable__header::before {

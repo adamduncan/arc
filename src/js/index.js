@@ -8,8 +8,6 @@ let ticking = false
 
 const timetableEl = document.getElementById('timetable')
 const timetableTop = timetableEl ? timetableEl.offsetTop : 0
-const tabsEl = document.querySelector('.tabs__tablist')
-const tabsHeight = tabsEl ? tabsEl.offsetHeight : 0
 const timetableHeaders = document.querySelectorAll('[data-timetable-header]')
 
 // CAROUSEL
