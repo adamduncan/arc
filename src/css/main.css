@@ -16,8 +16,10 @@
 
 html {
 	box-sizing: border-box;
+	overflow-x: hidden;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
+	width: 100vw;
 }
 
 *,
@@ -203,28 +205,24 @@ main {
 	}
 }
 
-
-/* Container */
-.fr-tabs {
-}
-
 /* Tablist */
-.fr-tabs__tablist {
+.tabs__tablist {
 	align-items: center;
 	background-color: #262729;
 	display: flex;
+	list-style: none;
 	padding: 0;
 	position: sticky;
 	top: 0;
+	width: 100%;
 	z-index: 2;
 }
 
-.fr-tabs--is-ready .fr-tabs__tablist-item {
-	list-style: none;
+.tabs__tablist-item {
 	width: 33%;
 }
 
-.fr-tabs__tab {
+.tabs__tab {
 	display: block;
 	color: #fff;
 	font-size: 0.813rem; /* 13px */
@@ -238,13 +236,13 @@ main {
 	will-change: opacity;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-.fr-tabs__tab:focus {
+.tabs__tab:focus {
 	outline: none;
 }
-.fr-tabs__tab[tabindex="0"] {
+.tabs__tab.is-selected {
 	opacity: 1;
 }
-.fr-tabs__tab::before {
+.tabs__tab::before {
 	background-color: #0361CE;
 	border-radius: 50%;
 	content: '';
@@ -258,19 +256,59 @@ main {
 	width: 1em;
 	will-change: transform;
 }
-.fr-tabs__tab[tabindex="0"]::before {
+.tabs__tab.is-selected::before {
 	transform: none;
 }
 
-/* Tabpanel */
-.fr-tabs__panel {
-	will-change: display;
+
+/* Carousel */
+.flickity-enabled {
+  position: relative;
 }
-.fr-tabs__panel[aria-hidden="true"] {
-	display: none;
+
+.flickity-enabled:focus { outline: none; }
+
+.flickity-viewport {
+  position: relative;
+  height: 100%;
+}
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+          tap-highlight-color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.carousel-container {
+	outline: 0;
+}
+.carousel-container,
+.carousel-cell {
+	width: 100%;
 }
 
 
+/* A11y */
 .visually-hidden {
 	border: 0;
 	clip: rect(0 0 0 0);
