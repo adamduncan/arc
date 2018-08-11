@@ -1,5 +1,4 @@
 import Flickity from 'flickity'
-import stickybits from 'stickybits'
 import schedule from './schedule'
 import share from './share'
 
@@ -8,25 +7,22 @@ const timetableTop = timetableEl ? timetableEl.offsetTop : 0
 const rAFSupported = window.requestAnimationFrame
 
 // CAROUSEL
-document.scrollingElement.style.overflowX = 'hidden'
-stickybits('.timetable__header', {
-  stickyBitStickyOffset: 49,
-  useStickyClasses: true
-})
 
 const scrollToTimetable = () => {
   if (!timetableEl || timetableTop === window.scrollY) return
   window.scroll({ 
     top: timetableTop,
-    left: 0,
-    behavior: 'smooth'
+    left: 0
+    // behavior: 'smooth'
   });
 }
 
 const flkty = new Flickity('[data-carousel]', {
   adaptiveHeight: true,
   prevNextButtons: false,
-  pageDots: false
+  pageDots: false,
+  selectedAttraction: 0.2,
+  friction: 0.8
 })
 
 const slideButtons = document.querySelectorAll('[data-carousel-button]');
