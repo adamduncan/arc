@@ -3,18 +3,17 @@ import schedule from './schedule'
 import share from './share'
 
 const rAFSupported = window.requestAnimationFrame
-// let lastKnownScrollPos = 0
-// let ticking = false
+let lastKnownScrollPos = 0
+let ticking = false
 
 const timetableEl = document.getElementById('timetable')
 const timetableTop = timetableEl ? timetableEl.offsetTop : 0
 const timetableHeaders = document.querySelectorAll('[data-timetable-header]')
-const stickySentinelEl = document.querySelector('.sticky-sentinel')
 
 // CAROUSEL
 const positionStickyHeader = scrollPos => {
   if (scrollPos > timetableTop) {
-    const offsetDistance = stickySentinelEl.offsetTop - timetableTop
+    const offsetDistance = scrollPos - timetableTop
     timetableHeaders.forEach(timetableHeader => timetableHeader.style.transform = `translateY(${offsetDistance}px)`)
   } else {
     timetableHeaders.forEach(timetableHeader => timetableHeader.style.transform = 'none')
@@ -24,7 +23,7 @@ const positionStickyHeader = scrollPos => {
 const scrollToTimetable = () => {
   if (!timetableEl || timetableTop === window.scrollY) return
   window.scroll({ 
-    top: timetableTop,
+    top: timetableTop + 1, // fix subpixel
     left: 0
     // behavior: 'smooth'
   });
@@ -59,18 +58,19 @@ flkty.on('change', function() {
   window.requestAnimationFrame(scrollToTimetable)
 })
 
-// if (rAFSupported) {
-  window.addEventListener('scroll', () => {
-    // lastKnownScrollPos = window.scrollY
-    // if (!ticking) {
-      // window.requestAnimationFrame(() => {
-        positionStickyHeader(window.scrollY);
-        // ticking = false
-      // });
-      // ticking = true
-    // }
+if (rAFSupported) {
+  window.addEventListener('scroll', (e) => {
+    lastKnownScrollPos = window.scrollY
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        positionStickyHeader(lastKnownScrollPos)
+        // positionStickyHeader(window.scrollY)
+        ticking = false
+      })
+      ticking = true
+    }
   })
-// }
+}
 
 
 // SCHEDULE
