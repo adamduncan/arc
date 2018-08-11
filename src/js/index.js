@@ -63,7 +63,7 @@ flkty.on('change', function() {
     // lastKnownScrollPos = window.scrollY
     // if (!ticking) {
       // window.requestAnimationFrame(() => {
-        positionStickyHeader(lastKnownScrollPos);
+        positionStickyHeader(window.scrollY);
         // ticking = false
       // });
       // ticking = true
