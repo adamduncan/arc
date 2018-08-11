@@ -8,15 +8,15 @@ let ticking = false
 
 const timetableEl = document.getElementById('timetable')
 const timetableTop = timetableEl ? timetableEl.offsetTop : 0
-const timetableHeaders = document.querySelectorAll('[data-timetable-header]')
+let timetableHeaders
 
 // CAROUSEL
 const positionStickyHeader = scrollPos => {
   if (scrollPos > timetableTop) {
     const offsetDistance = scrollPos - timetableTop
-    timetableHeaders.forEach(timetableHeader => timetableHeader.style.transform = `translateY(${offsetDistance}px)`)
+    timetableHeaders.forEach(timetableHeader => timetableHeader.style.transform = `translate3d(0, ${offsetDistance}px, 0)`)
   } else {
-    timetableHeaders.forEach(timetableHeader => timetableHeader.style.transform = 'none')
+    timetableHeaders.forEach(timetableHeader => timetableHeader.removeAttribute('style'))
   }
 }
 
@@ -34,7 +34,12 @@ const flkty = new Flickity('[data-carousel]', {
   prevNextButtons: false,
   pageDots: false,
   selectedAttraction: 0.2,
-  friction: 0.8
+  friction: 0.8,
+  on: {
+    ready: () =>{
+      timetableHeaders = document.querySelectorAll('.is-selected [data-timetable-header]')
+    }
+  }
 })
 
 const slideButtons = document.querySelectorAll('[data-carousel-button]');
@@ -55,22 +60,23 @@ flkty.on('select', function() {
 
 flkty.on('change', function() {
   if (!rAFSupported) return
+  timetableHeaders = document.querySelectorAll('.is-selected [data-timetable-header]')
   window.requestAnimationFrame(scrollToTimetable)
 })
 
-if (rAFSupported) {
+// if (rAFSupported) {
   window.addEventListener('scroll', (e) => {
-    lastKnownScrollPos = window.scrollY
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        positionStickyHeader(lastKnownScrollPos)
-        // positionStickyHeader(window.scrollY)
-        ticking = false
-      })
-      ticking = true
-    }
+    // lastKnownScrollPos = window.scrollY
+    // if (!ticking) {
+      // window.requestAnimationFrame(() => {
+        // positionStickyHeader(lastKnownScrollPos)
+        positionStickyHeader(window.scrollY)
+        // ticking = false
+      // })
+      // ticking = true
+    // }
   })
-}
+// }
 
 
 // SCHEDULE
