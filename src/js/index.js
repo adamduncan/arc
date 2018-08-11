@@ -3,8 +3,8 @@ import schedule from './schedule'
 import share from './share'
 
 const rAFSupported = window.requestAnimationFrame
-let lastKnownScrollPos = 0
-let ticking = false
+// let lastKnownScrollPos = 0
+// let ticking = false
 
 const timetableEl = document.getElementById('timetable')
 const timetableTop = timetableEl ? timetableEl.offsetTop : 0
@@ -24,8 +24,8 @@ const scrollToTimetable = () => {
   if (!timetableEl || timetableTop === window.scrollY) return
   window.scroll({ 
     top: timetableTop + 1, // subpixel fix
-    left: 0,
-    behavior: 'smooth'
+    left: 0
+    // behavior: 'smooth'
   });
 }
 
