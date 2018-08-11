@@ -2,7 +2,7 @@ import Frdialogmodal from 'fr-dialogmodal';
 import ClipboardJS from 'clipboard';
 import { storageUserId, fragmentPrefix } from './schedule'
 
-const siteUrl = 'https://arctangent.netlify.com'
+const siteUrl = 'https://clapp.live'
 const isNativeShare = navigator.share !== undefined
 
 const shareButton = document.querySelector('[data-share]')

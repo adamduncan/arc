@@ -14,7 +14,7 @@
   "bugs": {
     "url": "https://github.com/adamduncan/arc/issues"
   },
-  "homepage": "https://arctangent.netlify.com",
+  "homepage": "https://clapp.live",
   "dependencies": {
     "clipboard": "^2.0.1",
     "flickity": "^2.1.2",
