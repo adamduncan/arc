@@ -12,11 +12,16 @@ let timetableHeaders
 
 // CAROUSEL
 const positionStickyHeader = scrollPos => {
+  const headerCount = timetableHeaders.length
   if (scrollPos > timetableTop) {
     const offsetDistance = scrollPos - timetableTop
-    timetableHeaders.forEach(timetableHeader => timetableHeader.style.transform = `translate3d(0, ${offsetDistance}px, 0)`)
+    for (let i = 0; i < headerCount; i++) {
+      timetableHeaders[i].style.transform = `translate3d(0, ${offsetDistance}px, 0)`
+    }
   } else {
-    timetableHeaders.forEach(timetableHeader => timetableHeader.removeAttribute('style'))
+    for (let j = 0; j < headerCount; j++) {
+      timetableHeaders[j].removeAttribute('style')
+    }
   }
 }
 
@@ -64,19 +69,19 @@ flkty.on('change', function() {
   window.requestAnimationFrame(scrollToTimetable)
 })
 
-// if (rAFSupported) {
+if (rAFSupported) {
   window.addEventListener('scroll', (e) => {
-    // lastKnownScrollPos = window.scrollY
-    // if (!ticking) {
-      // window.requestAnimationFrame(() => {
-        // positionStickyHeader(lastKnownScrollPos)
-        positionStickyHeader(window.scrollY)
-        // ticking = false
-      // })
-      // ticking = true
-    // }
+    lastKnownScrollPos = window.scrollY
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        positionStickyHeader(lastKnownScrollPos)
+        // positionStickyHeader(window.scrollY)
+        ticking = false
+      })
+      ticking = true
+    }
   })
-// }
+}
 
 
 // SCHEDULE
