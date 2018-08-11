@@ -92,6 +92,10 @@ main {
 	padding: 0 1.25rem;
 }
 
+.timetable__headers {
+	display: none;
+}
+
 @supports (display: grid) {
 	.timetable {
 		background-image: repeating-linear-gradient(to bottom, #ccc, #ccc 1px, transparent 1px, transparent 13.5rem);
@@ -113,10 +117,30 @@ main {
 		padding-left: 0.0625rem;
 	}
 
+	.timetable__headers {
+		background-color: #fff;
+		display: block;
+		overflow: hidden;
+		position: sticky;
+		top: 49px; /* height of tabs */
+		width: 100vw;
+		z-index: 2;
+	}
+	.timetable__headers-inner {
+		display: flex;
+		width: 300vw;
+		will-change: transform;
+	}
+	.timetable__header-group {
+		display: flex;
+		width: 100vw;
+	}
+	
 	.timetable__header {
 		background-color: #fff;
 		border-bottom: 0.0625rem solid #eee;
 		display: block;
+		flex: 1;
 		font-size: 0.75rem; /* 12px */
 		font-weight: 400;
 		grid-row-start: 1;
@@ -126,7 +150,8 @@ main {
 		will-change: transform;
 		z-index: 2;
 	}
-	.timetable__location:not(:last-child) .timetable__header::before {
+	.timetable__location:not(:last-child) .timetable__header::before,
+	.timetable__header-group .timetable__header:not(:last-child)::before {
 		background-image: linear-gradient(to bottom, #fff, #eee);
 		content: '';
 		height: 100%;
@@ -135,6 +160,9 @@ main {
 		right: 0;
 		top: 0;
 		width: 0.0625rem;
+	}
+	.timetable__header-group .timetable__header:not(:last-child)::before {
+		margin-right: 0;
 	}
 	
 	.timetable__item {
@@ -302,6 +330,7 @@ main {
 
 .carousel-container {
 	outline: 0;
+	margin-top: -38px; /* height of timeline__header */
 }
 .carousel-container,
 .carousel-cell {
