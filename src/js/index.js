@@ -58,18 +58,18 @@ flkty.on('change', function() {
   window.requestAnimationFrame(scrollToTimetable)
 })
 
-if (rAFSupported) {
+// if (rAFSupported) {
   window.addEventListener('scroll', () => {
-    lastKnownScrollPos = window.scrollY
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
+    // lastKnownScrollPos = window.scrollY
+    // if (!ticking) {
+      // window.requestAnimationFrame(() => {
         positionStickyHeader(lastKnownScrollPos);
-        ticking = false
-      });
-      ticking = true
-    }
+        // ticking = false
+      // });
+      // ticking = true
+    // }
   })
-}
+// }
 
 
 // SCHEDULE
