@@ -36,7 +36,7 @@
 </head>
 
 <body>
-	<main>
+	<main class="main">
 		<header>
 			<div class="wrapper">
 
@@ -44,7 +44,7 @@
 				<span class="richtext">
 					<a href="http://www.arctangent.co.uk/">arctangent.co.uk</a>
 				</span>
-				<button class="button button--icon button--share" data-share aria-controls="share-modal">Share</button>
+				<button class="button button--round button--icon button--light button--share" data-share aria-controls="share-modal" style="float: right">Share</button>
 				<div class="js-fr-dialogmodal" id="share-modal" aria-hidden="true">
 					<div class="modal modal--slide-up js-fr-dialogmodal-modal" aria-labelledby="modal-title">
 						<div role="document">
@@ -113,17 +113,20 @@
 			<h2 class="visually-hidden">Timetable</h2>
 
 			<div>
-				<ul class="tabs__tablist">
-					<li class="tabs__tablist-item">
-						<a class="tabs__tab is-selected" id="tab-1" href="#day-20180816" data-carousel-button>Thu 16 Aug</a>
-					</li>
-					<li class="tabs__tablist-item">
-						<a class="tabs__tab" id="tab-2" href="#day-20180817" data-carousel-button>Fri 17 Aug</a>
-					</li>
-					<li class="tabs__tablist-item">
-						<a class="tabs__tab" id="tab-3" href="#day-20180818" data-carousel-button>Sat 18 Aug</a>
-					</li>
-				</ul>
+				<nav class="tabs">
+					<ul class="tabs__tablist">
+						<li class="tabs__tablist-item">
+							<a class="tabs__tab is-selected" id="tab-1" href="#day-20180816" data-carousel-button>Thu 16 Aug</a>
+						</li>
+						<li class="tabs__tablist-item">
+							<a class="tabs__tab" id="tab-2" href="#day-20180817" data-carousel-button>Fri 17 Aug</a>
+						</li>
+						<li class="tabs__tablist-item">
+							<a class="tabs__tab" id="tab-3" href="#day-20180818" data-carousel-button>Sat 18 Aug</a>
+						</li>
+					</ul>
+					<span class="tabs__indicator" data-tabs-indicator></span>
+				</nav>
 
 				<!-- build this dynamically in proper app -->
 				<div class="timetable__headers" aria-hidden="true">
@@ -758,6 +761,12 @@
 			</div>
 
 		</section>
+
+		<dialog class="dialog space-inset" data-dialog>
+			<p class="p p--small">You&rsquo;re currently viewing someone else&rsquo;s&nbsp;highlights</p>
+			<button class="button button--solid" data-dialog-reset data-dialog-empty="Make my own">Go back to yours</button>
+			<button class="button" data-dialog-copy>Use these instead</button>
+		</dialog>
 
 	</main>
 

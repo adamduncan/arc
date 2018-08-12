@@ -7,6 +7,7 @@ const rAFSupported = window.requestAnimationFrame
 const timetableEl = document.getElementById('timetable')
 const timetableTop = timetableEl ? timetableEl.offsetTop : 0
 const headersMirrorEl = document.querySelector('[data-headers-mirror]')
+const tabsIndicatorEl = document.querySelector('[data-tabs-indicator]')
 
 // CAROUSEL
 const scrollToTimetable = () => {
@@ -49,6 +50,7 @@ flkty.on('change', () => {
 
 flkty.on('scroll', (event, progress) => {
   if (headersMirrorEl) headersMirrorEl.style.transform = `translateX(${ -progress }px)`
+  if (tabsIndicatorEl) tabsIndicatorEl.style.transform = `translateX(${ progress / 3 }px)`
 })
 
 // SCHEDULE
