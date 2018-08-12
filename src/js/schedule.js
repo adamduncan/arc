@@ -2,9 +2,19 @@ export const fragmentPrefix = '#u/?'
 export const storageUserId = 'clapp-me'
 let storageId = 'clapp-me'
 const storageSharedId = 'clapp-u'
+
 const itemAttr = 'data-item'
 const itemToggleEls = document.querySelectorAll('[data-item-toggle]')
 const selectedClass = '-is-selected'
+
+const carouselEl = document.querySelector('[data-carousel]')
+const carouselInactiveClass = 'carousel-container--inactive'
+
+const dialogEl = document.querySelector('[data-dialog]')
+const dialogVisibleClass= 'dialog--visible'
+const dialogResetEl = dialogEl.querySelector('[data-dialog-reset]')
+const dialogCopyEl = dialogEl.querySelector('[data-dialog-copy]')
+
 
 // helpers
 function getItemElementById (id) {
@@ -72,12 +82,36 @@ function bindClickEvents () {
   })
 }
 
+function bindDialogEvents () {
+  dialogResetEl.addEventListener('click', returnToHome)
+  dialogCopyEl.addEventListener('click', () => {
+    const currentSelection = window.localStorage.getItem(storageSharedId)
+    window.localStorage.setItem(storageUserId, currentSelection)
+    returnToHome()
+  })
+}
+
 // actions
 function decodeSelection (selection) {
   return window.atob(selection)
 }
 function encodeSelection (selection) {
   return window.btoa(selection)
+}
+
+function returnToHome () {
+  const currentUrl = window.location.origin
+  window.location.href = currentUrl
+}
+
+function makeTimetableInactive () {
+  carouselEl.classList.add(carouselInactiveClass)
+}
+
+function showDialog () {
+  // update button text if user already has selection
+  if (window.localStorage.getItem(storageUserId)) dialogResetEl.innerHTML = dialogResetEl.getAttribute('data-dialog-underway')
+  dialogEl.classList.add(dialogVisibleClass)
 }
 
 function restoreSelection () {
@@ -90,6 +124,11 @@ function restoreSelection () {
   selectedArray.forEach(selectedId => {
     addItem(selectedId)
   })
+
+  if (!selectionFromUrl) return
+  showDialog()
+  makeTimetableInactive()
+  bindDialogEvents()
 }
 
 function init () {

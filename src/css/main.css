@@ -542,7 +542,7 @@ header {
 	left: 0;
 	padding: 0;
 	position: fixed;
-	transform: translateY(100%);
+	transform: translateY(110%);
 	transition: transform 200ms ease-out;
 	width: 100%;
 }
