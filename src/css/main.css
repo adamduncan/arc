@@ -480,6 +480,7 @@ header {
 	border-radius: 0.125em;
 	color: #0361CE;
 	cursor: pointer;
+	font-family: inherit;
 	font-size: 0.813rem;
 	padding: 0.5em 1em;
 	transition: border 100ms ease-out;
