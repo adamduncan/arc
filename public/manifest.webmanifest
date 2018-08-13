@@ -3,15 +3,16 @@
   "lang": "en",
   "short_name": "ArcTanGent",
   "name": "ArcTanGent 2018",
-  "start_url": "/",
+  "start_url": "/index.html",
   "display": "standalone",
+  "background_color": "#ffffff",
   "theme_color": "#111111",
   "launch_path": "/index.html",
   "description": "ArcTanGent 2018 timetable",
   "icons": [
     {
       "src": "../public/icon-touch.png",
-      "sizes": "192x192",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ],
