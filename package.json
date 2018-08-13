@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "parcel src/index.html --out-dir ./build/ --open && cp src/serviceworker.js build",
-    "build": "parcel build src/index.html --out-dir ./build/ --no-source-maps --experimental-scope-hoisting && cp src/serviceworker.js build"
+    "build": "parcel build src/index.html --out-dir ./build/ --no-source-maps --experimental-scope-hoisting && cp src/serviceworker.js build && cp public/icon-touch.png build"
   },
   "repository": {
     "type": "git",
